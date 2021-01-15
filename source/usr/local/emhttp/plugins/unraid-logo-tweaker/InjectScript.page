@@ -31,6 +31,7 @@ if (logo_img.length !== 0) {
 }
 // Custom CSS
 if (logo_css.length !== 0) {
+  console.log('Custom CSS found!')
   $('body').append('<style>' + logo_css + '</style>');
 }
 // </Unraid Logo Tweaker>
