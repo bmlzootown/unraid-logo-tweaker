@@ -29,7 +29,7 @@ include_once('/usr/local/emhttp/plugins/unraid-logo-tweaker/include/parse.php');
         <td width="200"><label class="orange" for="logo_img">base64 .png:</label></td><td><textarea name="logo_img" id="logo_img" rows="10"><?php print($cfg['logo_img']); ?></textarea></td>
     </tr>
     <tr>
-        <td width="200"><label class="orange" for="logo_css">CSS:</label></td><td><input type="text" name="logo_css" id="logo_css" placeholder="Example: 25px 50px 8px 0" value="<?php print($cfg['logo_css']); ?>"/></td>
+        <td width="200"><label class="orange" for="logo_css">CSS:</label></td><td><textarea name="logo_css" id="logo_css" rows="10"><?php print($cfg['logo_css']); ?></textarea></td>
     </tr>
 </table>
 <input type="submit" value="Save">

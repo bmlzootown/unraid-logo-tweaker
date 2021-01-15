@@ -6,7 +6,7 @@
 <!ENTITY github     "bmlzootown">
 <!ENTITY version    "2021.1.15">
 <!ENTITY launch     "Tools/UnraidLogoTweaker">
-<!ENTITY md5        "4c0eeae7c56db4df3ccca13d17f1f9bd">
+<!ENTITY md5        "ebc9e64bb8a4e21105fa40c44cb86e84">
 <!ENTITY pluginURL  "https://raw.githubusercontent.com/&github;/&name;/master/&name;.plg">
 <!ENTITY pluginDir  "/boot/config/plugins/&name;">
 <!ENTITY webGuiDir  "/usr/local/emhttp/plugins/&name;">
