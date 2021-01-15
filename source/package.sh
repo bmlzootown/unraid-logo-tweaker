@@ -1,22 +1,21 @@
 #!/bin/bash
-# For use with macOS. This is my workflow for building the unraid-logo-tweaker plugin .txz package. Tweak as necessary to work in your local environment. Remember to chmod 755 this script if you're on macOS Catalina or above!
 
-# Local environment path
-cd /Volumes/Development/git/unraid-logo-tweaker/source
-
-# Clean up all those nasty ._ files so they don't get put in the package
-dot_clean -n .
+cd ../
 
 # Create temporary directory and copy over the usr and boot folders
-mkdir tmp
-cp -R usr tmp
-cp -R boot tmp
+mkdir tmp/
+cp -R source/usr tmp/
 
 # Package up the temp directory
-tar -c -J -f $(dirname "$PWD")/archives/unraid-logo-tweaker-$(date +"%Y.%-m.%-d").txz -C $PWD/tmp .
+cd tmp/
+tar -cvf ../archives/unraid-logo-tweaker-$(date +"%Y.%-m.%-d").tar .
+xz -c -z ../archives/unraid-logo-tweaker-$(date +"%Y.%-m.%-d").tar > ../archives/unraid-logo-tweaker-$(date +"%Y.%-m.%-d").txz
+#tar -c -J -f $(dirname "$PWD")/archives/unraid-logo-tweaker-$(date +"%Y.%-m.%-d").txz -C $PWD/tmp *
 
 # Remove the temp directory
-rm -rf tmp
+cd ../
+rm -rf tmp/
+rm archives/unraid-logo-tweaker-$(date +"%Y.%-m.%-d").tar
 
 # Spit out the package MD5
-md5 $(dirname "$PWD")/archives/unraid-logo-tweaker-$(date +"%Y.%-m.%-d").txz
+md5sum archives/unraid-logo-tweaker-$(date +"%Y.%-m.%-d").txz

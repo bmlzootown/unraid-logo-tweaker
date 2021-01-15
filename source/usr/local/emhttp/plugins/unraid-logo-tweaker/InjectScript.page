@@ -11,7 +11,7 @@ include_once('/usr/local/emhttp/plugins/unraid-logo-tweaker/include/parse.php');
 var target = document.querySelector('.logo');
 var logo_url = '<?php print($cfg['logo_url']); ?>';
 var logo_img = '<?php print($cfg['logo_img']); ?>';
-var logo_img_margin = '<?php print($cfg['logo_img_margin']); ?>';
+var logo_css = '<?php print($cfg['logo_css']); ?>';
 // Set the new logo URL
 if (logo_url.length !== 0) {
     // Remove target="_blank" -- this is personal preference and may be an user-selectable option at some point ([X] Open in New Window)
@@ -23,8 +23,15 @@ if (logo_url.length !== 0) {
 }
 // Set the new logo image
 if (logo_img.length !== 0) {
+    // Get version string
+    var version = $('.logo').text();
+    var version = version.substring(version.indexOf('V'), version.length);
     // Replace the Unraid logo with custom Base64 PNG and margins (users may inject additional CSS following their margin)
-    target.children[0].innerHTML = '<img style="max-width: 160px; margin: ' + logo_img_margin + ';" src="data:image/png;base64,' + logo_img + '">';
+    $('.logo').html('<img id="logo-cont" style="max-width: 160px;" src="data:image/png;base64,' + logo_img + '"></div> <div id="version">' + version + '</div>');
+}
+// Custom CSS
+if (logo_css.length !== 0) {
+  $('head').append('<style>' + logo_css + '</style>');
 }
 // </Unraid Logo Tweaker>
 </script>

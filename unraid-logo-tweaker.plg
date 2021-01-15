@@ -3,10 +3,10 @@
 <!DOCTYPE PLUGIN [
 <!ENTITY name       "unraid-logo-tweaker">
 <!ENTITY author     "Joel Lombardo">
-<!ENTITY github     "joellombardo">
-<!ENTITY version    "2020.12.7a">
+<!ENTITY github     "bmlzootown">
+<!ENTITY version    "2021.1.15">
 <!ENTITY launch     "Tools/UnraidLogoTweaker">
-<!ENTITY md5        "7f5d79383112cc7b98eab40ca91dc265"> 
+<!ENTITY md5        "e5a3e0534d72096399d4229fda75bfb9">
 <!ENTITY pluginURL  "https://raw.githubusercontent.com/&github;/&name;/master/&name;.plg">
 <!ENTITY pluginDir  "/boot/config/plugins/&name;">
 <!ENTITY webGuiDir  "/usr/local/emhttp/plugins/&name;">
@@ -40,7 +40,7 @@ No license has been attached to this project as of version 2020.12.07.
 <![CDATA[
 logo_url='/Main'
 logo_img=''
-logo_img_margin='25px 50px 8px 0'
+logo_css=''
 ]]>
 </INLINE>
 </FILE>
