@@ -27,7 +27,7 @@ if (logo_img.length !== 0) {
     var version = $('.logo').text();
     var version = version.substring(version.indexOf('V'), version.length);
     // Replace the Unraid logo with custom Base64 PNG and margins (users may inject additional CSS following their margin)
-    $('.logo').html('<img id="logo-cont" style="max-width: 160px;" src="data:image/png;base64,' + logo_img + '"></div> <div id="version">' + version + '</div>');
+    $('.logo').html('<a href="' + logo_url + '"><img id="logo-cont" style="max-width: 160px;" src="data:image/png;base64,' + logo_img + '"></a><div id="version">' + version + '</div>');
 }
 // Custom CSS
 if (logo_css.length !== 0) {

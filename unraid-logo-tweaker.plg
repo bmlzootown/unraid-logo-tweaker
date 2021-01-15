@@ -6,7 +6,7 @@
 <!ENTITY github     "bmlzootown">
 <!ENTITY version    "2021.1.15">
 <!ENTITY launch     "Tools/UnraidLogoTweaker">
-<!ENTITY md5        "69527e8fe2432799dc5ebe2da81ba56d">
+<!ENTITY md5        "1e36622dceb0475a7bc6077ee73a7d39">
 <!ENTITY pluginURL  "https://raw.githubusercontent.com/&github;/&name;/master/&name;.plg">
 <!ENTITY pluginDir  "/boot/config/plugins/&name;">
 <!ENTITY webGuiDir  "/usr/local/emhttp/plugins/&name;">
@@ -38,7 +38,7 @@ No license has been attached to this project as of version 2020.12.07.
 <FILE Name="&pluginDir;/&name;.cfg">
 <INLINE>
 <![CDATA[
-logo_url='/Main'
+logo_url='/Dashboard'
 logo_img=''
 logo_css=''
 ]]>
